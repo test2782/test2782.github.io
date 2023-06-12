@@ -67,42 +67,50 @@
         <a href="/posts/my-first-post/">Read More</a></div>
 </article></div></div>
             </main>
-	            <h1>简易计算器</h1>
-    <form>
-        <label for="num1">数字1：</label> <input type="number" id="num1" name="num1"><br><br> <label
-            for="num2">数字2：</label> <input type="number" id="num2" name="num2"><br><br> <label
-            for="operator">运算符：</label> <select id="operator" name="operator">
-            <option value="+">+</option>
-            <option value="-">-</option>
-            <option value=""></option>
-            <option value="/">/</option>
-        </select><br><br> <input type="button" value="计算" onclick="calculate()"><br><br> <label for="result">结果：</label>
-        <input type="text" id="result" name="result" readonly>
+	                <form>
+        <input type="button" value="SSQ" onclick="SSQ()">
+        <input type="button" value="DLT" onclick="DLT()"><br><br>
+
+        <p id="result"></p>
     </form>
 
     <script>
-        function calculate() {
-            var num1 = parseInt(document.getElementById("num1").value);
-            var num2 = parseInt(document.getElementById("num2").value);
-            var operator = document.getElementById("operator").value;
-            var result;
-            switch (operator) {
-                case "+":
-                    result = num1 + num2;
-                    break;
-                case "-":
-                    result = num1 - num2;
-                    break;
-                case "*":
-                    result = num1 * num2;
-                    break;
-                case "/":
-                    result = num1 / num2;
-                    break;
-                default:
-                    result = "请输入正确的运算符";
+        function SSQ() {
+            var arr = new Array();
+            while(arr.length < 6){
+                var result = Math.floor(Math.random() * 33) + 1;
+                if (!arr.includes(result)){
+                    arr.push(result);
+                }  
             }
-            document.getElementById("result").value = result;
+            arr.sort(function (a, b) {
+                return a - b
+            });
+            var result = Math.floor(Math.random() * 16) + 1;
+            arr.push(result);
+            document.getElementById("result").innerHTML = "神秘代码：" + arr;
+        }
+
+        function DLT() {
+            var arr = new Array();
+            while(arr.length < 5){
+                var result = Math.floor(Math.random() * 35) + 1;
+                if (!arr.includes(result)){
+                    arr.push(result);
+                }  
+            }
+            arr.sort(function (a, b) {
+                return a - b
+            });
+            var result = Math.floor(Math.random() * 12) + 1;
+            arr.push(result);
+            while(arr.length < 7){
+                var result2 = Math.floor(Math.random() * 12) + 1;
+                if (result2 != result){
+                    arr.push(result2);
+                }  
+            }
+            document.getElementById("result").innerHTML = "神秘代码：" + arr;
         }
     </script>
 	    <footer class="footer">
