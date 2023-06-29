@@ -68,8 +68,8 @@
 </article></div></div>
             </main>
 	                <form>
-        <input type="button" value="SSQ" onclick="SSQ()">
-        <input type="button" value="DLT" onclick="DLT()"><br><br>
+        <input type="button" value="SSQ" onclick="SSQNew()">
+        <input type="button" value="DLT" onclick="DLTNew()"><br><br>
 
         <p id="result"></p>
     </form>
@@ -89,6 +89,26 @@
             var result = Math.floor(Math.random() * 16) + 1;
             arr.push(result);
             document.getElementById("result").innerHTML = "神秘代码：" + arr;
+        }
+	    
+	function SSQNew(){
+            var arr = [];
+            for (var i = 1; i <= 33; i++) {
+                arr.push(i);
+            }
+            var arrValue = new Array();
+            while(arrValue.length < 6){
+                var randomIndex = Math.floor(Math.random() * arr.length);
+                var randomNum = arr[randomIndex];
+                arrValue.push(randomNum);
+                arr.splice(randomIndex, 1)[0];
+            }
+            arrValue.sort(function (a, b) {
+                return a - b
+            });
+            var result = Math.floor(Math.random() * 16) + 1;
+            arrValue.push(result);
+            document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
         }
 
         function DLT() {
@@ -113,6 +133,41 @@
                 }  
             }
             document.getElementById("result").innerHTML = "神秘代码：" + arr;
+        }
+
+	function DLTNew() {
+            var arrRed = [];
+            for (var i = 1; i <= 35; i++) {
+                arrRed.push(i);
+            }
+            var arrBlue = [];
+            for (var i = 1; i <= 12; i++) {
+                arrBlue.push(i);
+            }            
+            var arrValue = new Array();
+            while(arrValue.length < 5){
+                var randomIndex = Math.floor(Math.random() * arrRed.length);
+                var randomNum = arrRed[randomIndex];
+                arrValue.push(randomNum);
+                arrRed.splice(randomIndex, 1)[0];
+            }
+            arrValue.sort(function (a, b) {
+                return a - b
+            });
+            var randomIndex = Math.floor(Math.random() * 12);
+            var result1 = arrBlue[randomIndex];
+            arrValue.push(result1);
+            arrBlue.splice(result1, 1)[0];
+            while(arrValue.length < 7){
+                var randomIndex = Math.floor(Math.random() * arrBlue.length);
+                var result2 = arrBlue[randomIndex];
+                if(result2 > result1){
+                    arrValue.splice(arrValue.length,0,result2);
+                }else if(result2 < result1){
+                    arrValue.splice(arrValue.length-1,0,result2);
+                }
+            }
+            document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
         }
     </script>
 	    <footer class="footer">
