@@ -70,6 +70,7 @@
     <form>
         <input type="button" value="SSQ" onclick="SSQNew()">
         <input type="button" value="DLT" onclick="DLTNew()"><br><br>
+
         <p id="result"></p>
     </form>
 
@@ -89,8 +90,8 @@
             arr.push(result);
             document.getElementById("result").innerHTML = "神秘代码：" + arr;
         }
-	    
-	function SSQNew(){
+
+        function SSQNew(){
             var arr = [];
             for (var i = 1; i <= 33; i++) {
                 arr.push(i);
@@ -124,17 +125,17 @@
             var result = Math.floor(Math.random() * 12) + 1;
             arr.push(result);
             while(arr.length < 7){
-                var result2 = Math.floor(Math.random() * 12) + 1;
-                if (result2 != result && result2 > result){
-                    arr.splice(arr.length,0,result2);
-                }else if(result2 != result && result2 < result){
-                    arr.splice(arr.length-1,0,result2);
-                }  
-            }
+                var result2 = Math.floor(Math.random() * 12) + 1;
+                if (result2 != result && result2 > result){
+                    arr.splice(arr.length,0,result2);
+                }else if(result2 != result && result2 < result){
+                    arr.splice(arr.length-1,0,result2);
+                }  
+            }
             document.getElementById("result").innerHTML = "神秘代码：" + arr;
         }
 
-	function DLTNew() {
+        function DLTNew() {
             var arrRed = [];
             for (var i = 1; i <= 35; i++) {
                 arrRed.push(i);
