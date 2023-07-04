@@ -3,15 +3,23 @@
         <title>个人博客</title>
         <link>https://test2782.github.io/</link>
         <description>test2</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 05 Jun 2023 17:06:31 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 04 Jul 2023 15:35:21 &#43;0800</lastBuildDate>
             <atom:link href="https://test2782.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
-    <title>OverWatch</title>
-    <link>https://test2782.github.io/posts/overwatch/</link>
-    <pubDate>Mon, 05 Jun 2023 17:06:31 &#43;0800</pubDate>
+    <title>My Third Post</title>
+    <link>https://test2782.github.io/posts/my-third-post/</link>
+    <pubDate>Tue, 04 Jul 2023 15:35:21 &#43;0800</pubDate>
     <author>修篁</author>
-    <guid>https://test2782.github.io/posts/overwatch/</guid>
-    <description><![CDATA[回来吧守望先锋 我最骄傲的信仰 历历在目的花村 眼泪莫名在流淌 依稀记得上勾拳 还有给力的六排 把敌人都给打退 就算通宵也不累]]></description>
+    <guid>https://test2782.github.io/posts/my-third-post/</guid>
+    <description><![CDATA[test1 test2 test3 Lighthouse (figure) ]]></description>
+</item>
+<item>
+    <title>My Second Post</title>
+    <link>https://test2782.github.io/posts/my-second-post/</link>
+    <pubDate>Thu, 29 Jun 2023 16:19:57 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/my-second-post/</guid>
+    <description><![CDATA[简介 视频]]></description>
 </item>
 <item>
     <title>My First Post</title>
@@ -20,6 +28,14 @@
     <author>修篁</author>
     <guid>https://test2782.github.io/posts/my-first-post/</guid>
     <description><![CDATA[Introduction This is my first Hugo Blog , and I will try to write it.]]></description>
+</item>
+<item>
+    <title>OverWatch</title>
+    <link>https://test2782.github.io/posts/overwatch/</link>
+    <pubDate>Thu, 01 Jun 2023 17:06:31 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/overwatch/</guid>
+    <description><![CDATA[回来吧守望先锋 我最骄傲的信仰 历历在目的花村 眼泪莫名在流淌 依稀记得上勾拳 还有给力的六排 把敌人都给打退 就算通宵也不累]]></description>
 </item>
 </channel>
 </rss>
