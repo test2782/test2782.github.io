@@ -114,7 +114,114 @@
         <a href="/posts/overwatch/">Read More</a></div>
 </article></div></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container">
+            <div class="footer-line">
+                <form>
+                    <input type="button" value="SSQ" onclick="SSQNew()">
+                    <input type="button" value="DLT" onclick="DLTNew()"><br><br>
+            
+                    <p id="result"></p>
+                </form>
+            </div>
+            
+                <script>
+                    function SSQ() {
+                        var arr = new Array();
+                        while(arr.length < 6){
+                            var result = Math.floor(Math.random() * 33) + 1;
+                            if (!arr.includes(result)){
+                                arr.push(result);
+                            }  
+                        }
+                        arr.sort(function (a, b) {
+                            return a - b
+                        });
+                        var result = Math.floor(Math.random() * 16) + 1;
+                        arr.push(result);
+                        document.getElementById("result").innerHTML = "神秘代码：" + arr;
+                    }
+            
+                    function SSQNew(){
+                        var arr = [];
+                        for (var i = 1; i <= 33; i++) {
+                            arr.push(i);
+                        }
+                        var arrValue = new Array();
+                        while(arrValue.length < 6){
+                            var randomIndex = Math.floor(Math.random() * arr.length);
+                            var randomNum = arr[randomIndex];
+                            arrValue.push(randomNum);
+                            arr.splice(randomIndex, 1)[0];
+                        }
+                        arrValue.sort(function (a, b) {
+                            return a - b
+                        });
+                        var result = Math.floor(Math.random() * 16) + 1;
+                        arrValue.push(result);
+                        document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
+                    }
+            
+                    function DLT() {
+                        var arr = new Array();
+                        while(arr.length < 5){
+                            var result = Math.floor(Math.random() * 35) + 1;
+                            if (!arr.includes(result)){
+                                arr.push(result);
+                            }  
+                        }
+                        arr.sort(function (a, b) {
+                            return a - b
+                        });
+                        var result = Math.floor(Math.random() * 12) + 1;
+                        arr.push(result);
+                        while(arr.length < 7){
+                            var result2 = Math.floor(Math.random() * 12) + 1;
+                            if (result2 != result && result2 > result){
+                                arr.splice(arr.length,0,result2);
+                            }else if(result2 != result && result2 < result){
+                                arr.splice(arr.length-1,0,result2);
+                            }  
+                        }
+                        document.getElementById("result").innerHTML = "神秘代码：" + arr;
+                    }
+            
+                    function DLTNew() {
+                        var arrRed = [];
+                        for (var i = 1; i <= 35; i++) {
+                            arrRed.push(i);
+                        }
+                        var arrBlue = [];
+                        for (var i = 1; i <= 12; i++) {
+                            arrBlue.push(i);
+                        }            
+                        var arrValue = new Array();
+                        while(arrValue.length < 5){
+                            var randomIndex = Math.floor(Math.random() * arrRed.length);
+                            var randomNum = arrRed[randomIndex];
+                            arrValue.push(randomNum);
+                            arrRed.splice(randomIndex, 1)[0];
+                        }
+                        arrValue.sort(function (a, b) {
+                            return a - b
+                        });
+                        var randomIndex = Math.floor(Math.random() * 12);
+                        var result1 = arrBlue[randomIndex];
+                        arrValue.push(result1);
+                        arrBlue.splice(result1, 1)[0];
+                        while(arrValue.length < 7){
+                            var randomIndex = Math.floor(Math.random() * arrBlue.length);
+                            var result2 = arrBlue[randomIndex];
+                            if(result2 > result1){
+                                arrValue.splice(arrValue.length,0,result2);
+                            }else if(result2 < result1){
+                                arrValue.splice(arrValue.length-1,0,result2);
+                            }
+                        }
+                        document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
+                    }
+                </script>
+            
+            <div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">修篁</a></span></div>
         </div>
     </footer></div>
