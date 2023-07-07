@@ -36,7 +36,18 @@
             <a href="/" title="个人博客">博客首页</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -51,11 +62,32 @@
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header><main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-avatar"><a href="/posts/" title="文章"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -82,113 +114,7 @@
         <a href="/posts/overwatch/">Read More</a></div>
 </article></div></div>
             </main><footer class="footer">
-        <div class="footer-container">
-            <div class="footer-line">
-            <form>
-                <input type="button" value="SSQ" onclick="SSQNew()">
-                <input type="button" value="DLT" onclick="DLTNew()">
-        
-                <p id="result"></p>
-            </form>
-        </div>
-        
-            <script>
-                function SSQ() {
-                    var arr = new Array();
-                    while(arr.length < 6){
-                        var result = Math.floor(Math.random() * 33) + 1;
-                        if (!arr.includes(result)){
-                            arr.push(result);
-                        }  
-                    }
-                    arr.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 16) + 1;
-                    arr.push(result);
-                    document.getElementById("result").innerHTML = "神秘代码：" + arr;
-                }
-        
-                function SSQNew(){
-                    var arr = [];
-                    for (var i = 1; i <= 33; i++) {
-                        arr.push(i);
-                    }
-                    var arrValue = new Array();
-                    while(arrValue.length < 6){
-                        var randomIndex = Math.floor(Math.random() * arr.length);
-                        var randomNum = arr[randomIndex];
-                        arrValue.push(randomNum);
-                        arr.splice(randomIndex, 1)[0];
-                    }
-                    arrValue.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 16) + 1;
-                    arrValue.push(result);
-                    document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
-                }
-        
-                function DLT() {
-                    var arr = new Array();
-                    while(arr.length < 5){
-                        var result = Math.floor(Math.random() * 35) + 1;
-                        if (!arr.includes(result)){
-                            arr.push(result);
-                        }  
-                    }
-                    arr.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 12) + 1;
-                    arr.push(result);
-                    while(arr.length < 7){
-                        var result2 = Math.floor(Math.random() * 12) + 1;
-                        if (result2 != result && result2 > result){
-                            arr.splice(arr.length,0,result2);
-                        }else if(result2 != result && result2 < result){
-                            arr.splice(arr.length-1,0,result2);
-                        }  
-                    }
-                    document.getElementById("result").innerHTML = "神秘代码：" + arr;
-                }
-        
-                function DLTNew() {
-                    var arrRed = [];
-                    for (var i = 1; i <= 35; i++) {
-                        arrRed.push(i);
-                    }
-                    var arrBlue = [];
-                    for (var i = 1; i <= 12; i++) {
-                        arrBlue.push(i);
-                    }            
-                    var arrValue = new Array();
-                    while(arrValue.length < 5){
-                        var randomIndex = Math.floor(Math.random() * arrRed.length);
-                        var randomNum = arrRed[randomIndex];
-                        arrValue.push(randomNum);
-                        arrRed.splice(randomIndex, 1)[0];
-                    }
-                    arrValue.sort(function (a, b) {
-                        return a - b
-                    });
-                    var randomIndex = Math.floor(Math.random() * 12);
-                    var result1 = arrBlue[randomIndex];
-                    arrValue.push(result1);
-                    arrBlue.splice(result1, 1)[0];
-                    while(arrValue.length < 7){
-                        var randomIndex = Math.floor(Math.random() * arrBlue.length);
-                        var result2 = arrBlue[randomIndex];
-                        if(result2 > result1){
-                            arrValue.splice(arrValue.length,0,result2);
-                        }else if(result2 < result1){
-                            arrValue.splice(arrValue.length-1,0,result2);
-                        }
-                    }
-                    document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
-                }
-            </script>
-            <div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">修篁</a></span></div>
         </div>
     </footer></div>
@@ -198,5 +124,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"data":{"id-1":"一个正在建设中的个人博客"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@8.6.0/dist/index.umd.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"data":{"id-1":"一个正在建设中的个人博客"},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"id-1":["id-1"]},"duration":-1,"speed":100}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
