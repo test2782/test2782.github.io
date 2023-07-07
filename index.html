@@ -56,7 +56,7 @@
             </a></div>
     </div>
 </header><main class="main">
-                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"></div></div>
+                <div class="container"><div class="page home" data-home="posts"><div class="home-profile"><div class="home-subtitle"><div id="id-1" class="typeit"></div></div><div class="links"><a href="https://github.com/test2782" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github fa-fw" aria-hidden="true"></i></a><a href="https://gitee.com/xiuhuang" title="Gitee" target="_blank" rel="noopener noreffer me"><i class="fab fa-gitlab fa-fw" aria-hidden="true"></i></a><a href="https://steamcommunity.com/id/1043528155" title="Steam" target="_blank" rel="noopener noreffer me"><i class="fab fa-steam fa-fw" aria-hidden="true"></i></a><a href="https://space.bilibili.com/10113008" title="bilibili" target="_blank" rel="noopener noreffer me"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/bilibili.svg" aria-hidden="true"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/my-third-post/">My Third Post</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>修篁</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-07-04">2023-07-04</time></span></div><div class="content">test1 test2 test3 Lighthouse (figure) </div><div class="post-footer">
@@ -73,112 +73,112 @@
         <a href="/posts/overwatch/">OverWatch</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>修篁</a></span>&nbsp;<span class="post-publish">published on <time datetime="2023-06-01">2023-06-01</time></span></div><div class="content">回来吧守望先锋 我最骄傲的信仰 历历在目的花村 眼泪莫名在流淌 依稀记得上勾拳 还有给力的六排 把敌人都给打退 就算通宵也不累</div><div class="post-footer">
         <a href="/posts/overwatch/">Read More</a></div>
-</article></div></div>
-            </main>
-            <form>
-                <input type="button" value="SSQ" onclick="SSQNew()">
-                <input type="button" value="DLT" onclick="DLTNew()"><br><br>
-        
-                <p id="result"></p>
-            </form>
-        
-            <script>
-                function SSQ() {
-                    var arr = new Array();
-                    while(arr.length < 6){
-                        var result = Math.floor(Math.random() * 33) + 1;
-                        if (!arr.includes(result)){
-                            arr.push(result);
-                        }  
-                    }
-                    arr.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 16) + 1;
-                    arr.push(result);
-                    document.getElementById("result").innerHTML = "神秘代码：" + arr;
-                }
-        
-                function SSQNew(){
-                    var arr = [];
-                    for (var i = 1; i <= 33; i++) {
-                        arr.push(i);
-                    }
-                    var arrValue = new Array();
-                    while(arrValue.length < 6){
-                        var randomIndex = Math.floor(Math.random() * arr.length);
-                        var randomNum = arr[randomIndex];
-                        arrValue.push(randomNum);
-                        arr.splice(randomIndex, 1)[0];
-                    }
-                    arrValue.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 16) + 1;
-                    arrValue.push(result);
-                    document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
-                }
-        
-                function DLT() {
-                    var arr = new Array();
-                    while(arr.length < 5){
-                        var result = Math.floor(Math.random() * 35) + 1;
-                        if (!arr.includes(result)){
-                            arr.push(result);
-                        }  
-                    }
-                    arr.sort(function (a, b) {
-                        return a - b
-                    });
-                    var result = Math.floor(Math.random() * 12) + 1;
-                    arr.push(result);
-                    while(arr.length < 7){
-                        var result2 = Math.floor(Math.random() * 12) + 1;
-                        if (result2 != result && result2 > result){
-                            arr.splice(arr.length,0,result2);
-                        }else if(result2 != result && result2 < result){
-                            arr.splice(arr.length-1,0,result2);
-                        }  
-                    }
-                    document.getElementById("result").innerHTML = "神秘代码：" + arr;
-                }
-        
-                function DLTNew() {
-                    var arrRed = [];
-                    for (var i = 1; i <= 35; i++) {
-                        arrRed.push(i);
-                    }
-                    var arrBlue = [];
-                    for (var i = 1; i <= 12; i++) {
-                        arrBlue.push(i);
-                    }            
-                    var arrValue = new Array();
-                    while(arrValue.length < 5){
-                        var randomIndex = Math.floor(Math.random() * arrRed.length);
-                        var randomNum = arrRed[randomIndex];
-                        arrValue.push(randomNum);
-                        arrRed.splice(randomIndex, 1)[0];
-                    }
-                    arrValue.sort(function (a, b) {
-                        return a - b
-                    });
-                    var randomIndex = Math.floor(Math.random() * 12);
-                    var result1 = arrBlue[randomIndex];
-                    arrValue.push(result1);
-                    arrBlue.splice(result1, 1)[0];
-                    while(arrValue.length < 7){
-                        var randomIndex = Math.floor(Math.random() * arrBlue.length);
-                        var result2 = arrBlue[randomIndex];
-                        if(result2 > result1){
-                            arrValue.splice(arrValue.length,0,result2);
-                        }else if(result2 < result1){
-                            arrValue.splice(arrValue.length-1,0,result2);
-                        }
-                    }
-                    document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
-                }
-            </script>
-            <footer class="footer">
+</article></div>
+<form>
+    <input type="button" value="SSQ" onclick="SSQNew()">
+    <input type="button" value="DLT" onclick="DLTNew()"><br><br>
+
+    <p id="result"></p>
+</form>
+
+<script>
+    function SSQ() {
+        var arr = new Array();
+        while(arr.length < 6){
+            var result = Math.floor(Math.random() * 33) + 1;
+            if (!arr.includes(result)){
+                arr.push(result);
+            }  
+        }
+        arr.sort(function (a, b) {
+            return a - b
+        });
+        var result = Math.floor(Math.random() * 16) + 1;
+        arr.push(result);
+        document.getElementById("result").innerHTML = "神秘代码：" + arr;
+    }
+
+    function SSQNew(){
+        var arr = [];
+        for (var i = 1; i <= 33; i++) {
+            arr.push(i);
+        }
+        var arrValue = new Array();
+        while(arrValue.length < 6){
+            var randomIndex = Math.floor(Math.random() * arr.length);
+            var randomNum = arr[randomIndex];
+            arrValue.push(randomNum);
+            arr.splice(randomIndex, 1)[0];
+        }
+        arrValue.sort(function (a, b) {
+            return a - b
+        });
+        var result = Math.floor(Math.random() * 16) + 1;
+        arrValue.push(result);
+        document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
+    }
+
+    function DLT() {
+        var arr = new Array();
+        while(arr.length < 5){
+            var result = Math.floor(Math.random() * 35) + 1;
+            if (!arr.includes(result)){
+                arr.push(result);
+            }  
+        }
+        arr.sort(function (a, b) {
+            return a - b
+        });
+        var result = Math.floor(Math.random() * 12) + 1;
+        arr.push(result);
+        while(arr.length < 7){
+            var result2 = Math.floor(Math.random() * 12) + 1;
+            if (result2 != result && result2 > result){
+                arr.splice(arr.length,0,result2);
+            }else if(result2 != result && result2 < result){
+                arr.splice(arr.length-1,0,result2);
+            }  
+        }
+        document.getElementById("result").innerHTML = "神秘代码：" + arr;
+    }
+
+    function DLTNew() {
+        var arrRed = [];
+        for (var i = 1; i <= 35; i++) {
+            arrRed.push(i);
+        }
+        var arrBlue = [];
+        for (var i = 1; i <= 12; i++) {
+            arrBlue.push(i);
+        }            
+        var arrValue = new Array();
+        while(arrValue.length < 5){
+            var randomIndex = Math.floor(Math.random() * arrRed.length);
+            var randomNum = arrRed[randomIndex];
+            arrValue.push(randomNum);
+            arrRed.splice(randomIndex, 1)[0];
+        }
+        arrValue.sort(function (a, b) {
+            return a - b
+        });
+        var randomIndex = Math.floor(Math.random() * 12);
+        var result1 = arrBlue[randomIndex];
+        arrValue.push(result1);
+        arrBlue.splice(result1, 1)[0];
+        while(arrValue.length < 7){
+            var randomIndex = Math.floor(Math.random() * arrBlue.length);
+            var result2 = arrBlue[randomIndex];
+            if(result2 > result1){
+                arrValue.splice(arrValue.length,0,result2);
+            }else if(result2 < result1){
+                arrValue.splice(arrValue.length-1,0,result2);
+            }
+        }
+        document.getElementById("result").innerHTML = "New神秘代码：" + arrValue;
+    }
+</script>
+</div>
+            </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.112.7">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2023</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">修篁</a></span></div>
         </div>
