@@ -118,7 +118,8 @@
             <div class="footer-line">
                 <form>
                     <input type="button" value="SSQ" onclick="SSQNew()">
-                    <input type="button" value="DLT" onclick="DLTNew()">            
+                    <input type="button" value="DLT" onclick="DLTNew()">
+                    <input type="text" id="arrDel" name="arrDel">
                     <p id="result"></p>
                 </form>
                 <script>
@@ -142,6 +143,11 @@
                         var arr = [];
                         for (var i = 1; i <= 33; i++) {
                             arr.push(i);
+                        }
+                        var value = document.getElementById("arrDel").value;
+                        var arrDel = value.split(',');
+                        for (var i = 0; i < arrDel.length; i++) {
+                            arr = arr.filter(item => item !== parseInt(arrDel[i]));
                         }
                         var arrValue = new Array();
                         while(arrValue.length < 6){
