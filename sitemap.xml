@@ -2,10 +2,11 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>https://test2782.github.io/posts/</loc><lastmod>2023-09-12T13:59:44&#43;08:00</lastmod></url><url>
+            <loc>https://test2782.github.io/</loc><lastmod>2023-09-12T13:59:44&#43;08:00</lastmod></url><url>
+            <loc>https://test2782.github.io/posts/%E5%AE%9E%E9%AA%8C%E8%AE%B0%E5%BD%952-001-2023-9-12/</loc><lastmod>2023-09-12T13:59:44&#43;08:00</lastmod></url><url>
             <loc>https://test2782.github.io/about/</loc><lastmod>2023-07-07T16:10:00&#43;08:00</lastmod></url><url>
             <loc>https://test2782.github.io/posts/my-third-post/</loc><lastmod>2023-07-04T15:35:21&#43;08:00</lastmod></url><url>
-            <loc>https://test2782.github.io/posts/</loc><lastmod>2023-07-04T15:35:21&#43;08:00</lastmod></url><url>
-            <loc>https://test2782.github.io/</loc><lastmod>2023-07-04T15:35:21&#43;08:00</lastmod></url><url>
             <loc>https://test2782.github.io/posts/my-second-post/</loc><lastmod>2023-06-29T16:19:57&#43;08:00</lastmod></url><url>
             <loc>https://test2782.github.io/posts/my-first-post/</loc><lastmod>2023-06-02T11:46:56&#43;08:00</lastmod></url><url>
             <loc>https://test2782.github.io/posts/overwatch/</loc><lastmod>2023-06-01T17:06:31&#43;08:00</lastmod></url><url>
