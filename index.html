@@ -121,7 +121,15 @@
         <div class="footer-container">
             <div class="footer-line">
                 <form>
-                    <input type="button" value="神秘代码" onclick="SSQNew()">
+		    <label>有</label>
+                    <input type="text" id="arrAddRed" name="arrAddRed" size="16px">
+                    <input type="text" id="arrAddBlue" name="arrAddBlue" size="8px">
+                    <br>
+                    <label>无</label>
+                    <input type="text" id="arrDelRed" name="arrDelRed" size="16px">
+                    <input type="text" id="arrDelBlue" name="arrDelBlue" size="8px">                    
+                    <br>
+                    <input type="button" value="生成" onclick="SSQNew()">
                     <input type="text" id="arrDel" name="arrDel">
                     <input type="button" value="反转" onclick="SSQNewFZ()">
                     <p id="result"></p>
@@ -144,23 +152,81 @@
                     }
             
                     function SSQNew(){
-                        var arr = [];
-                        for (var i = 1; i <= 33; i++) {
-                            arr.push(i);
+			var valueAddRed = document.getElementById("arrAddRed").value;
+                        var arrAddRed = valueAddRed.split(',');
+                        var valueAddBlue = document.getElementById("arrAddBlue").value;
+                        var arrAddBlue = valueAddBlue.split(',');
+                        var valueDelRed = document.getElementById("arrDelRed").value;
+                        var arrDelRed = valueDelRed.split(',');
+                        var valueDelBlue = document.getElementById("arrDelBlue").value;
+                        var arrDelBlue = valueDelBlue.split(',');
+                        
+                        if (valueAddRed == null && valueAddBlue == null && valueDelRed == null && valueDelBlue == null)
+                        {
+                            var arr = [];
+                            for (var i = 1; i <= 33; i++) {
+                                arr.push(i);
+                            }
+                            var arrValue = new Array();
+                            while(arrValue.length < 6){
+                                var randomIndex = Math.floor(Math.random() * arr.length);
+                                var randomNum = arr[randomIndex];
+                                arrValue.push(randomNum);
+                                arr.splice(randomIndex, 1)[0];
+                            }
+                            arrValue.sort(function (a, b) {
+                                return a - b
+                            });
+                            var result = Math.floor(Math.random() * 16) + 1;
+                            arrValue.push(result);
+                            document.getElementById("arr").value = arrValue.toString();
+                        }else
+                        {
+                            var arrRed = [];
+                            for (var i = 1; i <= 33; i++) {
+                                arrRed.push(i);
+                            }
+                            var arrBlue = [];
+                            for (var i = 1; i <= 16; i++) {
+                                arrBlue.push(i);
+                            }
+                            for (var i = 0; i < arrDelRed.length; i++) {
+                                arrRed = arrRed.filter(item => item !== parseInt(arrDelRed[i]));
+                            }
+                            for (var i = 0; i < arrDelBlue.length; i++) {
+                                arrBlue = arrBlue.filter(item => item !== parseInt(arrDelBlue[i]));
+                            }
+
+                            if (arrAddRed != null && arrAddRed.length >= 6)
+                            {
+                                arrRed = arrAddRed;
+                            }
+                            if (arrAddBlue != null && arrAddBlue != "")
+                            {
+                                arrBlue = arrAddBlue;
+                            }
+
+                            var arrValue = new Array();
+                            if (arrAddRed != null && arrAddRed != "" && arrAddRed.length < 6)
+                            {
+                                for (var i = 0; i < arrAddRed.length; i++) {
+                                    arrValue.push(arrAddRed[i]);
+                                    arrRed = arrRed.filter(item => item !== parseInt(arrAddRed[i]));
+                                }
+                            }
+                            while(arrValue.length < 6){
+                                var randomIndex = Math.floor(Math.random() * arrRed.length);
+                                var randomNum = arrRed[randomIndex];
+                                arrValue.push(randomNum);
+                                arrRed.splice(randomIndex, 1)[0];
+                            }
+                            arrValue.sort(function (a, b) {
+                                return a - b
+                            });
+                            var result = arrBlue[Math.floor(Math.random() * arrBlue.length)];
+                            arrValue.push(result);
+                            document.getElementById("arr").value = arrValue.toString();
                         }
-                        var arrValue = new Array();
-                        while(arrValue.length < 6){
-                            var randomIndex = Math.floor(Math.random() * arr.length);
-                            var randomNum = arr[randomIndex];
-                            arrValue.push(randomNum);
-                            arr.splice(randomIndex, 1)[0];
-                        }
-                        arrValue.sort(function (a, b) {
-                            return a - b
-                        });
-                        var result = Math.floor(Math.random() * 16) + 1;
-                        arrValue.push(result);
-                        document.getElementById("arrDel").value = arrValue.toString();
                     }
 
                     function SSQNewFZ(){
