@@ -130,7 +130,7 @@
                     <input type="text" id="arrDelBlue" name="arrDelBlue" size="8px">                    
                     <br>
                     <input type="button" value="生成" onclick="SSQNew()">
-                    <input type="text" id="arrDel" name="arrDel">
+                    <input type="text" id="arr" name="arr">
                     <input type="button" value="反转" onclick="SSQNewFZ()">
                     <p id="result"></p>
                 </form>
@@ -238,7 +238,7 @@
                         for (var i = 1; i <= 16; i++) {
                             arrBlue.push(i);
                         }
-                        var value = document.getElementById("arrDel").value;
+                        var value = document.getElementById("arr").value;
                         var arrDel = value.split(',');
                         for (var i = 0; i < arrDel.length-1; i++) {
                             arrRed = arrRed.filter(item => item !== parseInt(arrDel[i]));
@@ -256,7 +256,7 @@
                         });
                         var result = arrBlue[Math.floor(Math.random() * arrBlue.length)];
                         arrValue.push(result);
-                        document.getElementById("arrDel").value = arrValue.toString();
+                        document.getElementById("arr").value = arrValue.toString();
                     }
             
                     function DLT() {
