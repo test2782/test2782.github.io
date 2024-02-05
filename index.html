@@ -156,7 +156,7 @@
                     }
             
                     function SSQNew(){
-			            var valueAddRed = document.getElementById("arrAddRed").value;
+			var valueAddRed = document.getElementById("arrAddRed").value;
                         var arrAddRed = valueAddRed.split(',');
                         var valueAddBlue = document.getElementById("arrAddBlue").value;
                         var arrAddBlue = valueAddBlue.split(',');
@@ -186,6 +186,51 @@
                             document.getElementById("arr").value = arrValue.toString();
                         }else
                         {
+                            var newarrAddRed = [];
+                            var newarrAddBlue = [];
+                            var newarrDelRed = [];
+                            var newarrDelBlue = [];
+                            if (arrAddRed != null && arrAddRed != "")
+                            {
+                                for(i = 0; i<arrAddRed.length; i++)
+                                {
+                                    if(newarrAddRed.indexOf(arrAddRed[i]) == -1)
+                                    {
+                                        newarrAddRed.push(arrAddRed[i]);
+                                    }
+                                }
+                            }
+                            if (arrAddBlue != null && arrAddBlue != "")
+                            {
+                                for(i = 0; i<arrAddBlue.length; i++)
+                                {
+                                    if(newarrAddBlue.indexOf(arrAddBlue[i]) == -1)
+                                    {
+                                        newarrAddBlue.push(arrAddBlue[i]);
+                                    }
+                                }
+                            }
+                            if (arrDelRed != null && arrDelRed != "")
+                            {
+                                for(i = 0; i<arrDelRed.length; i++)
+                                {
+                                    if(newarrDelRed.indexOf(arrDelRed[i]) == -1)
+                                    {
+                                        newarrDelRed.push(arrDelRed[i]);
+                                    }
+                                }
+                            }
+                            if (arrDelBlue != null && arrDelBlue != "")
+                            {
+                                for(i = 0; i<arrDelBlue.length; i++)
+                                {
+                                    if(newarrDelBlue.indexOf(arrDelBlue[i]) == -1)
+                                    {
+                                        newarrDelBlue.push(arrDelBlue[i]);
+                                    }
+                                }
+                            }
+
                             var arrRed = [];
                             for (var i = 1; i <= 33; i++) {
                                 arrRed.push(i);
@@ -194,28 +239,27 @@
                             for (var i = 1; i <= 16; i++) {
                                 arrBlue.push(i);
                             }
-                            for (var i = 0; i < arrDelRed.length; i++) {
-                                arrRed = arrRed.filter(item => item !== parseInt(arrDelRed[i]));
+                            for (var i = 0; i < newarrDelRed.length; i++) {
+                                arrRed = arrRed.filter(item => item !== parseInt(newarrDelRed[i]));
                             }
-                            for (var i = 0; i < arrDelBlue.length; i++) {
-                                arrBlue = arrBlue.filter(item => item !== parseInt(arrDelBlue[i]));
-                            }
-
-                            if (arrAddRed != null && arrAddRed.length >= 6)
-                            {
-                                arrRed = arrAddRed;
-                            }
-                            if (arrAddBlue != null && arrAddBlue != "")
-                            {
-                                arrBlue = arrAddBlue;
+                            for (var i = 0; i < newarrDelBlue.length; i++) {
+                                arrBlue = arrBlue.filter(item => item !== parseInt(newarrDelBlue[i]));
                             }
 
                             var arrValue = new Array();
-                            if (arrAddRed != null && arrAddRed != "" && arrAddRed.length < 6)
+                            if (newarrAddRed != null && newarrAddRed.length >= 6)
                             {
-                                for (var i = 0; i < arrAddRed.length; i++) {
-                                    arrValue.push(arrAddRed[i]);
-                                    arrRed = arrRed.filter(item => item !== parseInt(arrAddRed[i]));
+                                arrRed = newarrAddRed;
+                            }
+                            if (newarrAddBlue != null && newarrAddBlue != "")
+                            {
+                                arrBlue = newarrAddBlue;
+                            }                            
+                            if (newarrAddRed != null && newarrAddRed != "" && newarrAddRed.length < 6)
+                            {
+                                for (var i = 0; i < newarrAddRed.length; i++) {
+                                    arrValue.push(newarrAddRed[i]);
+                                    arrRed = arrRed.filter(item => item !== parseInt(newarrAddRed[i]));
                                 }
                             }
                             while(arrValue.length < 6){
