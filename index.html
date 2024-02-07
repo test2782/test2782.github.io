@@ -241,38 +241,39 @@
                             }
                             for (var i = 0; i < newarrDelRed.length; i++) {
                                 arrRed = arrRed.filter(item => item !== parseInt(newarrDelRed[i]));
+                                newarrAddRed = newarrAddRed.filter(item => item !== newarrDelRed[i]);
                             }
                             for (var i = 0; i < newarrDelBlue.length; i++) {
                                 arrBlue = arrBlue.filter(item => item !== parseInt(newarrDelBlue[i]));
+                                newarrAddBlue = newarrAddBlue.filter(item => item !== newarrDelBlue[i]);
                             }
 
                             var arrValue = new Array();
-                            if (newarrAddRed != null && newarrAddRed.length >= 6)
-                            {
-                                arrRed = newarrAddRed;
-                            }
                             if (newarrAddBlue != null && newarrAddBlue != "")
                             {
                                 arrBlue = newarrAddBlue;
-                            }                            
+                            }
+                            if (newarrAddRed.length >= 6){
+                                arrRed = newarrAddRed;
+                            }
                             if (newarrAddRed != null && newarrAddRed != "" && newarrAddRed.length < 6)
                             {
                                 for (var i = 0; i < newarrAddRed.length; i++) {
-                                    arrValue.push(newarrAddRed[i]);
+                                    arrValue.push(parseInt(newarrAddRed[i]));
                                     arrRed = arrRed.filter(item => item !== parseInt(newarrAddRed[i]));
                                 }
                             }
                             while(arrValue.length < 6){
                                 var randomIndex = Math.floor(Math.random() * arrRed.length);
                                 var randomNum = arrRed[randomIndex];
-                                arrValue.push(randomNum);
+                                arrValue.push(parseInt(randomNum));
                                 arrRed.splice(randomIndex, 1)[0];
                             }
                             arrValue.sort(function (a, b) {
                                 return a - b
                             });
                             var result = arrBlue[Math.floor(Math.random() * arrBlue.length)];
-                            arrValue.push(result);
+                            arrValue.push(parseInt(result));
                             document.getElementById("arr").value = arrValue.toString();
                         }
                     }
