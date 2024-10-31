@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>text - Tag - 个人博客</title>
+        <link>https://test2782.github.io/tags/text/</link>
+        <description>text - Tag - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 29 Oct 2024 00:00:00 &#43;0800</lastBuildDate><atom:link href="https://test2782.github.io/tags/text/" rel="self" type="application/rss+xml" /><item>
+    <title>随笔02</title>
+    <link>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9402/</link>
+    <pubDate>Tue, 29 Oct 2024 00:00:00 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9402/</guid>
+    <description><![CDATA[前言 没有哪一天是特殊的，又或者每一天都是特殊的。 All those moments will be lost&hellip;in time, Like tears&hellip;in the rain. 正文 人类以所居住的这颗名为地球的行星自转一周为一天，以名为月亮的卫星绕]]></description>
+</item>
+<item>
+    <title>随笔01</title>
+    <link>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9401/</link>
+    <pubDate>Thu, 24 Oct 2024 15:34:35 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9401/</guid>
+    <description><![CDATA[前言 许多人的一生写于纸上，不过寥寥数行，大多还是些无聊的故事罢了。 正文 “听说了吗，等会儿就要公布调岗名单了。” “也是，校招的新一批大学生就要]]></description>
+</item>
+<item>
+    <title>2023</title>
+    <link>https://test2782.github.io/posts/2023/</link>
+    <pubDate>Sun, 31 Dec 2023 23:59:59 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/2023/</guid>
+    <description><![CDATA[没什么好说的，还是老样子，无惊无喜的一年。 好想玩地球ol破解版啊！ 妈的忍不了，一拳把地球打爆。]]></description>
+</item>
+</channel>
+</rss>

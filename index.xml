@@ -3,9 +3,17 @@
         <title>个人博客</title>
         <link>https://test2782.github.io/</link>
         <description>个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 24 Oct 2024 15:34:35 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 29 Oct 2024 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://test2782.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>随笔02</title>
+    <link>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9402/</link>
+    <pubDate>Tue, 29 Oct 2024 00:00:00 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9402/</guid>
+    <description><![CDATA[前言 没有哪一天是特殊的，又或者每一天都是特殊的。 All those moments will be lost&hellip;in time, Like tears&hellip;in the rain. 正文 人类以所居住的这颗名为地球的行星自转一周为一天，以名为月亮的卫星绕]]></description>
+</item>
+<item>
     <title>随笔01</title>
     <link>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9401/</link>
     <pubDate>Thu, 24 Oct 2024 15:34:35 &#43;0800</pubDate>

@@ -1,0 +1,31 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>test - Tag - 个人博客</title>
+        <link>https://test2782.github.io/tags/test/</link>
+        <description>test - Tag - 个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 04 Jul 2023 15:35:21 &#43;0800</lastBuildDate><atom:link href="https://test2782.github.io/tags/test/" rel="self" type="application/rss+xml" /><item>
+    <title>My Third Post</title>
+    <link>https://test2782.github.io/posts/my-third-post/</link>
+    <pubDate>Tue, 04 Jul 2023 15:35:21 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/my-third-post/</guid>
+    <description><![CDATA[test1 test2 test3 Lighthouse (figure) ]]></description>
+</item>
+<item>
+    <title>My Second Post</title>
+    <link>https://test2782.github.io/posts/my-second-post/</link>
+    <pubDate>Thu, 29 Jun 2023 16:19:57 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/my-second-post/</guid>
+    <description><![CDATA[简介 视频]]></description>
+</item>
+<item>
+    <title>My First Post</title>
+    <link>https://test2782.github.io/posts/my-first-post/</link>
+    <pubDate>Fri, 02 Jun 2023 11:46:56 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/my-first-post/</guid>
+    <description><![CDATA[Introduction This is my first Hugo Blog , and I will try to write it.]]></description>
+</item>
+</channel>
+</rss>
