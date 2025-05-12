@@ -3,9 +3,17 @@
         <title>个人博客</title>
         <link>https://test2782.github.io/</link>
         <description>个人博客</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Tue, 31 Dec 2024 00:00:00 &#43;0800</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 12 May 2025 00:00:00 &#43;0800</lastBuildDate>
             <atom:link href="https://test2782.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>随笔04</title>
+    <link>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9404/</link>
+    <pubDate>Mon, 12 May 2025 00:00:00 &#43;0800</pubDate>
+    <author>修篁</author>
+    <guid>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9404/</guid>
+    <description><![CDATA[前言 悟了十余载，迷雾遮眼心茫然，听罢百家言。 翻却千卷书，驽马踟蹰意难安，且行万里路。 正文 这世界大抵是不会有什么命定之人出现的，平凡而又普通，]]></description>
+</item>
+<item>
     <title>2024</title>
     <link>https://test2782.github.io/posts/2024/</link>
     <pubDate>Tue, 31 Dec 2024 00:00:00 &#43;0800</pubDate>
@@ -19,7 +27,7 @@
     <pubDate>Mon, 11 Nov 2024 13:24:54 &#43;0800</pubDate>
     <author>修篁</author>
     <guid>https://test2782.github.io/posts/%E9%9A%8F%E7%AC%9403/</guid>
-    <description><![CDATA[前言 世间倥偬几十载，不如我者多，胜似我者少，彼可为功名，我亦可为之。 正文 最近写随笔的频率有些高，毕竟发生了那种事情嘛，有点感慨也很正常。 还是]]></description>
+    <description><![CDATA[前言 世间倥偬几十载，不如我者多，胜似我者少，彼可为功名，我亦可为之。 正文 还是做不到吗？不要因为这个影响心态，你要知道，你是特别的。不宜妄自菲]]></description>
 </item>
 <item>
     <title>随笔02</title>
@@ -76,14 +84,6 @@
     <author>修篁</author>
     <guid>https://test2782.github.io/posts/my-second-post/</guid>
     <description><![CDATA[简介 视频]]></description>
-</item>
-<item>
-    <title>My First Post</title>
-    <link>https://test2782.github.io/posts/my-first-post/</link>
-    <pubDate>Fri, 02 Jun 2023 11:46:56 &#43;0800</pubDate>
-    <author>修篁</author>
-    <guid>https://test2782.github.io/posts/my-first-post/</guid>
-    <description><![CDATA[Introduction This is my first Hugo Blog , and I will try to write it.]]></description>
 </item>
 </channel>
 </rss>
